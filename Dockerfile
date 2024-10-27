@@ -8,7 +8,7 @@ RUN apt-get update && \
     git checkout OpenSSL_1_1_1w && \
     cd ../nginx && \
     git checkout release-1.27.2 && \
-    auto/configure --with-http_ssl_module --with-openssl=/root/openssl --with-openssl-opt=enable-ssl3 --with-openssl-opt=enable-ssl3-method --with-openssl-opt=enable-weak-ssl-ciphers && \
+    auto/configure --with-http_ssl_module --with-openssl=../openssl --with-openssl-opt=enable-ssl3 --with-openssl-opt=enable-ssl3-method --with-openssl-opt=enable-weak-ssl-ciphers && \
     make && \
     make install && \
     cd .. && \
